@@ -375,8 +375,7 @@ body {
 
 	.container {
 		margin: 0 auto;
-		max-width: calc(100% - 50px);
-		width: 1200px;
+		width: 1600px;
 	}
 
 		.container.medium {
@@ -1896,9 +1895,303 @@ body {
 			.button.alt:active {
 				background-color: #3f3f3f;
 			}
-
+.projects-section {
+    margin-top: 120px; /* 🔥 kontrolowany odstęp */
+}
 /* List */
+/* GŁÓWNY TYTUŁ */
+#portfolio h2 {
+    color: #5a4fcf; /* fiolet */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+}
 
+/* PODTYTUŁ */
+#portfolio header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #0f0f0f;
+	    margin-top: 50px;
+}.before-after-wrapper {
+    display: flex;
+    gap: 60px;
+    margin-top: 50px;
+}
+.section-title {
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 80px 0 60px;
+}
+.column {
+    flex: 1;
+}
+
+.ba-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.ba-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ba-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* 🔥 lekki cień */
+}
+
+/* 🔥 wrapper – centrowanie */
+.single-project {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px; /* odstęp od góry */
+}
+
+/* 🔥 obraz */
+.single-img {
+    width: 100%;
+    max-width: 1900px; /* kontrolujesz szerokość */
+
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    object-fit: cover;
+}
+
+/* 🔥 wrapper – 2 kolumny */
+.dual-projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* odstęp między nimi */
+    margin-top: 60px;
+}
+
+/* 🔥 pionowe kafelki */
+.dual-img {
+    width: 100%;
+    max-width: 785px; /* kontrolujesz szerokość */
+
+    height: 1370px; /* 🔥 pionowy format */
+object-fit: contain;
+
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔥 wrapper 2x2 */
+.quad-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolumny */
+    gap: 30px;
+    max-width: 1600px;
+    margin: 60px auto 0 auto;
+}
+
+/* 🔥 kafelki – ten sam styl co wcześniej */
+.quad-img {
+    width: 100%;
+    height: 400px; /* możesz dopasować */
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔥 CAŁA SEKCJA */
+.clients-contact {
+    background-color: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* 🔥 TYTUŁ */
+.clients-title {
+    color: #5a4fcf;
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+/* 🔥 LOGA – 5 w rzędzie */
+.clients-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* 🔥 GLOBALNY EFEKT HOVER */
+.single-img,
+.dual-img,
+.quad-img,
+.ba-images img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+/* 🔥 HOVER */
+.single-img:hover,
+.dual-img:hover,
+.quad-img:hover,
+.ba-images img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+/* 🔥 LOGA STYLE */
+.clients-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 60px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 🔥 same logo – bez kafelków */
+.clients-logos img {
+    width: 100%;
+    max-width: 240px; /* 🔥 większe niż wcześniej */
+    height: auto;
+
+    margin: 0 auto;
+    display: block;
+
+    filter: grayscale(100%); /* 🔥 opcjonalnie – bardziej premium */
+    opacity: 0.8;
+
+    transition: all 0.3s ease;
+}
+
+/* 🔥 hover efekt */
+.clients-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 🔥 MAŁY BIAŁY KWADRAT */
+.divider-box {
+    width: 40px;
+    height: 40px;
+    background: white;
+    margin: 80px auto;
+    border-radius: 6px;
+}
+
+/* 🔥 DRUGI TYTUŁ */
+.contact-heading h2 {
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* 🔥 BIAŁY PASEK */
+.contact-bar {
+    width: 100%;
+    background: white;
+
+    padding: 40px 0;
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔥 TEKST */
+.contact-bar h2 {
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+@media screen and (max-width: 768px) {
+    .before-after-wrapper {
+        flex-direction: column;
+    }
+
+	/* 🔥 SEKCJA PROJECTS – ODDZIELENIE */
+.projects-section {
+    margin-top: 120px; /* 🔥 KLUCZOWE */
+}
+
+/* tytuł */
+.section-title {
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+/* GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 🔥 DUŻY OBRAZ (pełna szerokość) */
+.projects-grid .full {
+    grid-column: 1 / -1;
+    height: 500px;
+}
+
+/* 🔥 PIONOWE (2 kolumny) */
+.projects-grid .half {
+    height: 600px;
+}
+
+/* 🔥 STANDARDOWE (na końcu 2x2) */
+.projects-grid img:not(.full):not(.half) {
+    height: 250px;
+}
+
+/* 🔥 WSPÓLNE */
+.projects-grid img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+	.before-after-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* 🔥 pozwala kontrolować zawijanie */
+}
+
+.column {
+    flex: 0 0 48%; /* 🔥 zamiast flex:1 */
+}
+
+/* ważne */
+.ba-images img {
+    width: 100%;
+    height: auto; /* 🔥 zamiast 250px */
+    aspect-ratio: 16 / 9; /* zachowuje proporcje */
+    object-fit: cover;
+}
+}
 	ul {
 		list-style: disc;
 		padding-left: 1em;
