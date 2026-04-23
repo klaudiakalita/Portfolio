@@ -2012,10 +2012,102 @@ object-fit: contain;
 /* 🔥 CAŁA SEKCJA */
 .clients-contact {
     background-color: #f4f4f4;
-    padding: 100px 0;
+
+    text-align: center;
+}
+.contact-section {
+    width: 100%;
+    height: 500px;
+    background-color: #e5e5e5;
+
+    position: relative;
+}
+.contact-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    height: 100%;
+    align-items: center;
+}
+
+/* 🔥 pojedynczy box */
+.contact-box {
+    background: #ffffff;
+    border-radius: 20px;
+
+    width: 300px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+.contact-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    height: 100%;
+    align-items: flex-start; /* 🔥 zamiast center */
+
+    margin-top: 80px; /* 🔥 kontrolujesz ile niżej */
+}
+
+/* 🔥 tekst */
+.contact-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+.contact-box {
+    flex-direction: column; /* 🔥 żeby tekst był pod spodem */
+    gap: 10px;
+}
+
+/* 🔥 fioletowy tekst */
+.contact-info {
+    color: #5a4fcf; /* Twój kolor */
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.site-footer {
+    width: 100%;
+    height: 50px;
+
+    background-color: #5a4fcf; /* Twój fiolet */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
 }
 
+/* tekst */
+.site-footer p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+/* 🔥 HOVER efekt */
+.contact-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
 /* 🔥 TYTUŁ */
 .clients-title {
     color: #5a4fcf;
@@ -2860,6 +2952,17 @@ object-fit: contain;
 					margin-left: auto !important;
 					margin-right: auto !important;
 				}
+			
+
+/* jeśli chcesz żeby naprawdę wychodziło poza container Miniport */
+.clients-contact {
+    padding: 0;
+}
+
+.contact-bar {
+    text-align: center;
+    padding: 40px 0;
+}
 .box.style2 .image.featured img {
     height: 200px;
     object-fit: cover;
