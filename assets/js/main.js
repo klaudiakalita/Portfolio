@@ -43,4 +43,23 @@ $(window).on('scroll', function() {
         $nav.removeClass('scrolled');
     }
 });	
+
+const arrow = document.querySelector('.scroll-down');
+
+// klik → scroll do ABOUT
+arrow.addEventListener('click', () => {
+    document.querySelector('#work').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+// ukrywanie przy scrollu
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        arrow.classList.add('scroll-hidden');
+    } else {
+        arrow.classList.remove('scroll-hidden');
+    }
+});
+
 })(jQuery);

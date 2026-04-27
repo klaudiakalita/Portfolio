@@ -73,6 +73,45 @@ input, select, textarea {
 }
 
 /* Basic */
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+	animation: bounce 1.5s infinite;
+}
+
+/* strzałka V */
+.scroll-down span {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    border-left: 5px solid #5a4fcf;
+    border-bottom: 5px solid #5a4fcf;
+
+    transform: rotate(-45deg);
+    margin: auto;
+}
+
+/* animacja góra-dół */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* ukrywanie */
+.scroll-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 	html {
 		box-sizing: border-box;
@@ -154,7 +193,11 @@ input, select, textarea {
 		margin: 0 0 0.75em 0;
 		font-family: 'Open Sans', sans-serif;
 	}
-
+.clients-contact {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding-top: 50px; /* 🔥 TO ROZWIĄZUJE 90% przypadków */
+}
 #work h2 {
     color: #5540af;
     margin: 0 0 0.75em 0;
@@ -230,6 +273,10 @@ input, select, textarea {
     justify-content: space-between;
     gap: 80px;
     text-align: left;
+}@media screen and (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
 }
 .about-left {
     flex: 1;
@@ -373,10 +420,12 @@ body {
 
 /* Container */
 
-	.container {
-		margin: 0 auto;
-		width: 1600px;
-	}
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px; /* 🔥 kontrolujesz szerokość */
+    padding: 0 20px;   /* 🔥 żeby nie kleiło się do krawędzi */
+}
 
 		.container.medium {
 			width: 900px;
@@ -1779,9 +1828,10 @@ body {
 	}
 
 		.image img {
-			display: block;
-			width: 100%;
-		}
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 		.image.fit {
 			display: block;
@@ -1979,9 +2029,9 @@ body {
 
 /* 🔥 pionowe kafelki */
 .dual-img {
+    aspect-ratio: 9 / 16; /* 🔥 pionowy format */
     width: 100%;
-    max-width: 785px; /* kontrolujesz szerokość */
-
+    object-fit: cover;
     height: 1370px; /* 🔥 pionowy format */
 object-fit: contain;
 
@@ -2001,7 +2051,7 @@ object-fit: contain;
 /* 🔥 kafelki – ten sam styl co wcześniej */
 .quad-img {
     width: 100%;
-    height: 400px; /* możesz dopasować */
+ aspect-ratio: 16 / 9;
 
     object-fit: cover;
 
@@ -2119,7 +2169,7 @@ object-fit: contain;
 /* 🔥 LOGA – 5 w rzędzie */
 .clients-logos {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 40px;
 
     max-width: 1400px;
@@ -2145,7 +2195,7 @@ object-fit: contain;
 /* 🔥 LOGA STYLE */
 .clients-logos {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     align-items: center;
     gap: 60px;
 
@@ -2656,7 +2706,7 @@ object-fit: contain;
 
 	#top {
 		padding: 10em 0 10em 0;
-		text-align: left;
+		text-align: left;     padding-bottom: calc(11em + 50px);
 	}
 
 #top .image {
@@ -2696,7 +2746,7 @@ object-fit: contain;
 }
 
 		#top h1 {
-			margin-top: 3em;
+			margin-top: 4em;
 		}
 
 		#top p {
@@ -2957,6 +3007,7 @@ object-fit: contain;
 /* jeśli chcesz żeby naprawdę wychodziło poza container Miniport */
 .clients-contact {
     padding: 0;
+	
 }
 
 .contact-bar {
